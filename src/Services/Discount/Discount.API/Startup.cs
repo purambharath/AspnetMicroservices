@@ -1,4 +1,5 @@
 using Discount.API.Repositories;
+using Discount.API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,8 +28,8 @@ namespace Discount.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-
             services.AddScoped<IDiscountRepository, DiscountRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
